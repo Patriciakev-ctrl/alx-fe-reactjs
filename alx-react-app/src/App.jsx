@@ -18,7 +18,7 @@ function App() {
         <Header />
         <MainContent />
         <Footer />
-        <UserProfile name="Patricia TCHINGUE" age="21" bio="Freelance Developer and young entrepreneur" />
+        <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
