@@ -11,17 +11,19 @@ import UserContext from "./components/UserContext";
 import ProfilePage from "./components/ProfilePage";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+ 
 
   return (
     <>
       <div>
-      <UserContext.Povider value={userData}>
+      <UserContext.Provider value={ userData }>
           <>
           <ProfilePage />
           </>
          
-        </UserContext.Povider>
+        </UserContext.Provider>
         <WelcomeMessage />
         <Header />
         <MainContent />
