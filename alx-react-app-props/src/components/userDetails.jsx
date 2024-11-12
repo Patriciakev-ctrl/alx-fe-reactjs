@@ -1,8 +1,10 @@
+
 import { useContext } from "react";
 import UserContext from "./UserContext";
 
-function UserProfile() {
-    const userData = useContext(UserContext);
+function UserDetails() {
+  /*  
+  const userData = useContext(UserContext);
     return (
         
       <div>
@@ -10,6 +12,7 @@ function UserProfile() {
         <p>Email: {userData.email}</p>
       </div>
     );
+    */
   }
   
-  export default UserProfile;
+  export default UserDetails;
