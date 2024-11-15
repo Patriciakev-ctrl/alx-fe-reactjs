@@ -9,8 +9,8 @@ import Footer from "./components/Footer";
 const App = () => {
     return (
         <div>
-            <NavBar />
-            <Footer/>
+            <NavBar></NavBar>
+            <Footer></Footer>
             
         </div>
     );
