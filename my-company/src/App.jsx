@@ -1,19 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {About, Services, Home, Contact, NavBar  } from "./components";
+import About from "./components/About";
+import Services   from "./components/Services";
+import  Home  from "./components/Home";
+import Contact from "./components/Contact";
+import NavBar  from "./components/NavBar";
+import Footer from "./components/Footer";
 
-export default function App() {
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<NavBar/>} />
-                <Route index element={<Home/>} />
-                <Route path="services" element={<Services/>} />
-                <Route path="about" element={<About/>} />
-                <Route path="contact" element={<Contact/>} />
-            </Routes>
-        
-        </BrowserRouter>
+const App = () => {
+    return (
+        <div>
+            <NavBar />
+            <Footer/>
+            
+        </div>
     );
-}
+};
+
+export default App;

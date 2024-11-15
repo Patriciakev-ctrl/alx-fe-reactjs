@@ -17,7 +17,7 @@ function Contact() {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{  padding: '20px', margin: '20px', backgroundColor: '#fff5f5', border: '1px solid #ffcccb',borderRadius: '5px', }}>
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <input
