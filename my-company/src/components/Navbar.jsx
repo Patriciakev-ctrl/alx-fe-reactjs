@@ -3,8 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav>
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
+      <nav >
+        <ul style={{ listStyleType: 'none', padding: 0, backgroundColor:'lightblue', justifyContent:'left', height:'3em', textDecoration:'none', margin: '20px', marginTop:'2px' }}>
           <li style={{ display: 'inline', margin: '0 15px' }}>
             <Link to="/">Home</Link>
           </li>
