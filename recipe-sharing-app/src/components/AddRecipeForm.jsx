@@ -12,7 +12,6 @@ import { useRecipeStore } from "./recipeStore";
      addRecipe({ id: Date.now(), title, description });
      setTitle('');
      setDescription('');
-     alert(state.recipes);
    };
 
    

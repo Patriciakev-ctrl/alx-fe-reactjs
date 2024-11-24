@@ -1,7 +1,7 @@
 import {  create }from 'zustand';
 
 const useRecipeStore = create(set => ({
-  recipes: [{title:'pain',description:'Farine et sel'}],
+  recipes: [],
   addRecipe: recipe => set(state => ({ recipes: [...state.recipes, recipe] })),
   deleteRecipe: recipeId => set(state => ({
     recipes: state.recipes.filter(recipe => recipe.id !== recipeId),
