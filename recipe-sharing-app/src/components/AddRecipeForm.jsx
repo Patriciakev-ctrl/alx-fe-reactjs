@@ -12,8 +12,10 @@ import { useRecipeStore } from "./recipeStore";
      addRecipe({ id: Date.now(), title, description });
      setTitle('');
      setDescription('');
+     alert(title +" "+ description);
    };
 
+   
    return (
      <form onSubmit={handleSubmit}>
        <input
@@ -27,9 +29,11 @@ import { useRecipeStore } from "./recipeStore";
          onChange={(e) => setDescription(e.target.value)}
          placeholder="Description"
        />
+       
        <button type="submit">Add Recipe</button>
      </form>
    );
  };
+
 
  export default AddRecipeForm;

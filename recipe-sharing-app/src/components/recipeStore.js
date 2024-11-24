@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import {  create }from 'zustand';
 
 const useRecipeStore = create(set => ({
   recipes: [],
@@ -13,4 +13,4 @@ const useRecipeStore = create(set => ({
   })),
 }));
 
-export {useRecipeStore};
+export { useRecipeStore };

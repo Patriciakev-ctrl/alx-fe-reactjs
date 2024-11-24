@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 const RecipeDetails = () => {
   const { recipeId } = useParams(); // Get recipeId from URL parameters
   const recipe = useRecipeStore(state =>
-    state.recipes.find(recipe => recipe.id === recipeId)
+    state.recipes.find(recipe => recipe.id == recipeId)
   );
 
   if (!recipe) return <div>Recipe not found!</div>;
