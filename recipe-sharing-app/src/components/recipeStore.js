@@ -25,6 +25,25 @@ const useRecipeStore = create(set => ({
     }));
   },
   setRecipes: (newRecipes) => set({ recipes: newRecipes, filteredRecipes: newRecipes }),
+
+  favorites: [],
+  addFavorite: (recipeId) => set(state => ({
+    favorites: [...new Set([...state.favorites, recipeId])] // Prevent duplicates
+  })),
+  removeFavorite: (recipeId) => set(state => ({
+    favorites: state.favorites.filter(id => id !== recipeId)
+  })),
+  recommendations: [],
+  generateRecommendations: () => set(state => {
+    // Example recommendation logic based on favorites
+    const recommended = state.recipes.filter(recipe =>
+      state.favorites.includes(recipe.id)
+      // Here you can add more logic for personalized recommendations
+    );
+
+    // Limit recommendations to 5 for better UI/UX
+    return { recommendations: recommended.slice(0, 5) };
+  }),
   
 }));
 
