@@ -1,18 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {  BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css'
-import AddRecipeForm from "./components/AddRecipeForm";
+import RecipeDetails from "./components/RecipeDetails";
 import RecipeList from "./components/RecipeList";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <RecipeList></RecipeList>
-      <AddRecipeForm></AddRecipeForm>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<RecipeList />} />
+      <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
