@@ -2,8 +2,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { useRecipeStore } from './recipeStore';
+
+
 const DeleteRecipeButton = ({ recipeId }) => {
   const navigate = useNavigate();
+  const deleteRecipe = useRecipeStore(state => state.deleteRecipe);
 
   const handleDelete = async () => {
     // Assume deleteRecipe is a function that deletes a recipe.
