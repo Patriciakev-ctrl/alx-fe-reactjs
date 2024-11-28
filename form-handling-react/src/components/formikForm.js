@@ -10,13 +10,13 @@ const RegistrationForm = () => {
     };
 
     const validationSchema = Yup.object({
-        username: Yup.string()
-            .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-        email: Yup.string().email('Invalid email address').required('Required'),
-        password: Yup.string()
-            .min(6, 'Password must be at least 6 characters')
-            .required('Required'),
+        username: Yup.string().required('Required')
+            .max(15, 'Must be 15 characters or less'),
+            
+        email: Yup.string().required('Required').email('Invalid email address'),
+        password: Yup.string().required('Required')
+            .min(6, 'Password must be at least 6 characters'),
+            
     });
 
     const onSubmit = (values, { setSubmitting }) => {
