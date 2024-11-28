@@ -6,28 +6,28 @@ const RegistrationForm = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [error, setErrors] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         
         // Basic validation
         if (!username ) {
-            setError('All fields are required!');
+            setErrors('All fields are required!');
             return;
         }
         if (!email) {
-            setError('All fields are required!');
+            setErrors('All fields are required!');
             return;
         }
         if (!password) {
-            setError('All fields are required!');
+            setErrors('All fields are required!');
             return;
         }
 
 
         // Reset error message
-        setError('');
+        setErrors('');
 
         // Handle form submission logic here (e.g., API call)
         console.log('Form submitted:', { username, email, password });
